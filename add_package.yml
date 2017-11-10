@@ -1,0 +1,29 @@
+---
+- hosts: packages
+  serial: 1
+  gather_facts: no
+  vars:
+    gem_name: "{{ inventory_hostname.replace('tfm-ror51-rubygem-', '') }}"
+    rubygem_spec_template: "../../scl-rubygem-GEM.spec.template"
+  roles:
+    - git-annex-setup
+  tasks:
+    - name: 'Create package directory'
+      file:
+        state: directory
+        path: "packages/{{ inventory_hostname }}"
+
+    - name: 'Fetch gem'
+      command: "gem fetch {{ gem_name }} --version {{ version }}"
+      args:
+        chdir: "packages/{{ inventory_hostname }}"
+
+    - name: 'Git annex add new file(s)'
+      command: "git annex add {{ gem_name }}"
+      args:
+        chdir: "packages/{{ inventory_hostname }}"
+
+    - name: 'Run gem2rpm'
+      shell: "gem2rpm -t {{ rubygem_spec_template }} {{ gem_name }}-{{ version }}.gem > {{ inventory_hostname }}.spec"
+      args:
+        chdir: "packages/{{ inventory_hostname }}"

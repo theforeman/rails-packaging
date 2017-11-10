@@ -1,0 +1,20 @@
+---
+- name: 'Release to targets'
+  command: "tito release {{ tito_releasers }}"
+  args:
+    chdir: "packages/{{ inventory_hostname }}"
+  register: target_release
+  tags:
+    - always
+
+- debug:
+    msg: "{{ target_release.stdout_lines }}"
+  when: target_release | succeeded
+  tags:
+    - always
+
+- debug:
+    msg: "{{ target_release.stderr.split('\n') }}"
+  when: target_release | failed
+  tags:
+    - always

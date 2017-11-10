@@ -1,0 +1,3 @@
+.build/srpm_repo/
+.build/build_repo/
+*.pyc

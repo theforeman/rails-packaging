@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  gather_facts: no
+  become: true
+  tasks:
+    - name: 'Install gem2rpm'
+      yum:
+        name: rubygem-gem2rpm
+        state: present
