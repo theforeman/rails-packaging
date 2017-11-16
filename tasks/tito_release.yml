@@ -1,6 +1,6 @@
 ---
 - name: 'Release to targets'
-  command: "tito release {{ tito_releasers }}"
+  command: "tito release {{ releasers | join(' ') }}"
   args:
     chdir: "packages/{{ inventory_hostname }}"
   register: target_release
@@ -8,7 +8,7 @@
     - always
 
 - debug:
-    msg: "{{ target_release.stdout_lines }}"
+    msg: "{{ target_release.stdout_lines | join('\n') }}"
   when: target_release | succeeded
   tags:
     - always

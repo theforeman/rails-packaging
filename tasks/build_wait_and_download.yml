@@ -1,29 +1,17 @@
 ---
-# we use this to ensure that `wait` tagged tasks only run with `--tags
-# wait` is passed
-- command: /bin/true
-  register: normal_execution_check
-
 - set_fact:
     build_tasks: "{{ target_release.stdout_lines \
       | select('match', '^Created builds:.*') \
       | map('regex_replace', '^Created builds:\\s(\\d+)', '\\1') \
       | list }}"
-  when: normal_execution_check is not defined
-  tags:
-    - wait
 
 - name: 'Watch task(s)'
   command: "copr-cli watch-build {{ build_tasks | join(' ') }}"
   ignore_errors: yes
   register: build_status
   when: (target_release | succeeded) and (normal_execution_check is not defined)
-  tags:
-    - wait
 
 - name: 'Failed build'
   fail:
     msg: 'The build in build has failed'
   when: (build_status | failed) and (normal_execution_check is not defined)
-  tags:
-    - wait

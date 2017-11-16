@@ -18,12 +18,21 @@
       args:
         chdir: "packages/{{ inventory_hostname }}"
 
-    - name: 'Git annex add new file(s)'
-      command: "git annex add {{ gem_name }}"
-      args:
-        chdir: "packages/{{ inventory_hostname }}"
-
     - name: 'Run gem2rpm'
       shell: "gem2rpm -t {{ rubygem_spec_template }} {{ gem_name }}-{{ version }}.gem > {{ inventory_hostname }}.spec"
       args:
         chdir: "packages/{{ inventory_hostname }}"
+
+    - name: 'Git annex add new file(s)'
+      command: "git annex add {{ gem_name }}-{{ version }}.gem"
+      args:
+        chdir: "packages/{{ inventory_hostname }}"
+
+    - name: 'Add new sources'
+      command: "git add packages/{{ inventory_hostname }}/*.spec"
+
+    - name: 'Create git branch'
+      command: "git checkout -b {{ gem_name }}-{{ version }}"
+
+    - name: 'Create git commit'
+      command: "git commit -a -m 'Add {{ gem_name }} {{ version }}'"

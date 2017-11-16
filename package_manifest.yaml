@@ -3,20 +3,16 @@ localhost:
   hosts:
     localhost:
 
-copr:
+all:
   vars:
-    name: tfm-ror51
     chroots:
       - dist: epel-7-x86_64
         external_repos:
-          - http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os
-          - http://mirrors.fedoraproject.org/mirrorlist?repo=epel-7&arch=x86_64
           - http://mirror.centos.org/centos/7/sclo/x86_64/rh/
+          - https://copr-be.cloud.fedoraproject.org/results/@theforeman/tfm-ror51/epel-7-$basearch/
         packages:
           - scl-utils-build
-          - rh-ruby24-scldevel
-  hosts:
-    localhost: {}
+          - rh-ruby24-build
 
 packages:
   vars:
