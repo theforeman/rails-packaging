@@ -44,8 +44,8 @@ packages:
       version: 3.2.3
     #tfm-ror51-rubygem-concurrent-ruby:
     #  version: 1.0.5
-    #tfm-ror51-rubygem-crass:
-    #  version: 1.0.2
+    tfm-ror51-rubygem-crass:
+      version: 1.0.2
     #tfm-ror51-rubygem-erubi:
     #  version: 1.7.0
     #tfm-ror51-rubygem-globalid:
