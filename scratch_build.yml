@@ -45,7 +45,7 @@
         - always
 
     - name: 'Build SRPM'
-      command: 'tito build --srpm --output=../../.tmp'
+      command: 'tito build --srpm --output=../../.tmp --scl=tfm-ror51'
       args:
         chdir: "packages/{{ inventory_hostname }}"
       register: srpm_build
@@ -57,3 +57,6 @@
       register: build_status
       tags:
         - always
+
+    - debug:
+        msg: "{{ build_status.stdout_lines | join('\n') }}"

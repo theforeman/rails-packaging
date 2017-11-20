@@ -4,7 +4,7 @@
     - .tmp/copr_repo
   tasks:
     - name: 'Run repoclosure'
-      command: "repoclosure -c repoclosure/el7.conf -t -r scratch --repofrompath=scratch,https://copr-be.cloud.fedoraproject.org/results/{{ copr_repo }}/epel-7-x86_64/ -l el7-base -l el7-scl"
+      command: "repoclosure -c repoclosure/el7.conf -t -r scratch --repofrompath=scratch,https://copr-be.cloud.fedoraproject.org/results/{{ copr_repo }}/epel-7-x86_64/ -l el7-base -l el7-scl -l tfm-ror51-copr"
       register: output
 
     - name: 'Cleanup'

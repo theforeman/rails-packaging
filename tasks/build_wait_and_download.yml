@@ -9,9 +9,9 @@
   command: "copr-cli watch-build {{ build_tasks | join(' ') }}"
   ignore_errors: yes
   register: build_status
-  when: (target_release | succeeded) and (normal_execution_check is not defined)
+  when: target_release | succeeded
 
 - name: 'Failed build'
   fail:
     msg: 'The build in build has failed'
-  when: (build_status | failed) and (normal_execution_check is not defined)
+  when: build_status | failed

@@ -13,6 +13,7 @@ all:
         packages:
           - scl-utils-build
           - rh-ruby24-build
+          - tfm-ror51-build
 
 packages:
   vars:
@@ -39,8 +40,8 @@ packages:
     #  version: 5.1.4
     tfm-ror51-rubygem-arel:
       version: 8.0.0
-    #tfm-ror51-rubygem-builder:
-    #  version: 3.2.3
+    tfm-ror51-rubygem-builder:
+      version: 3.2.3
     #tfm-ror51-rubygem-concurrent-ruby:
     #  version: 1.0.5
     #tfm-ror51-rubygem-crass:

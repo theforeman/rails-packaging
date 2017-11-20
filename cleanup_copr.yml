@@ -3,7 +3,7 @@
   gather_facts: no
   tasks:
     - name: 'Get Copr repositories'
-      command: "copr-cli list @theforeman"
+      command: "copr-cli list"
       register: copr_repos
 
     - set_fact:
