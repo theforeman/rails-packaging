@@ -68,8 +68,8 @@ packages:
     #  version: 1.8.1
     tfm-ror51-rubygem-rack:
       version: 2.0.3
-    #tfm-ror51-rubygem-rack-test:
-    #  version: 0.7.0
+    tfm-ror51-rubygem-rack-test:
+      version: 0.7.0
     #tfm-ror51-rubygem-rails:
     #  version: 5.1.4
     #tfm-ror51-rubygem-rails-dom-testing:
