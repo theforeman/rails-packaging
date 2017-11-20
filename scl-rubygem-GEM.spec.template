@@ -23,7 +23,7 @@ BuildRequires: %{?scl_prefix_ruby}<%= requirement 'rubygems-devel', req %>
 BuildRequires: %{?scl_prefix_ruby}<%= requirement "ruby#{'-devel' unless spec.extensions.empty?}", req %>
 <% end -%>
 <% for d in spec.development_dependencies -%>
-<% unless ["rdoc", "rake", "bundler"].include? d.name -%>
+<% unless ["rdoc", "rake", "bundler", "rspec", "minitest"].include? d.name -%>
 <% for req in d.requirement -%>
 BuildRequires: %{?scl_prefix_ruby}<%= requirement "rubygem(#{d.name})", req %>
 <% end -%>
