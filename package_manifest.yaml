@@ -56,8 +56,8 @@ packages:
     #  version: 2.1.1
     #tfm-ror51-rubygem-mail:
     #  version: 2.7.0
-    #tfm-ror51-rubygem-method_source:
-    #  version: 0.9.0
+    tfm-ror51-rubygem-method_source:
+      version: 0.9.0
     tfm-ror51-rubygem-mini_mime:
       version: 1.0.0
     #tfm-ror51-rubygem-mini_portile2:
