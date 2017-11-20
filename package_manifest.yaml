@@ -84,8 +84,8 @@ packages:
     #  version: 3.2.1
     tfm-ror51-rubygem-thor:
       version: 0.20.0
-    #tfm-ror51-rubygem-thread_safe:
-    #  version: 0.3.6
+    tfm-ror51-rubygem-thread_safe:
+      version: 0.3.6
     #tfm-ror51-rubygem-tzinfo:
     #  version: 1.2.4
     #tfm-ror51-rubygem-websocket-driver:
