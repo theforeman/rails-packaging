@@ -62,8 +62,8 @@ packages:
       version: 1.0.0
     tfm-ror51-rubygem-mini_portile2:
       version: 2.3.0
-    #tfm-ror51-rubygem-nio4r:
-    #  version: 2.1.0
+    tfm-ror51-rubygem-nio4r:
+      version: 2.1.0
     #tfm-ror51-rubygem-nokogiri:
     #  version: 1.8.1
     tfm-ror51-rubygem-rack:
