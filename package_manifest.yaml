@@ -32,8 +32,8 @@ packages:
     #  version: 5.1.4
     tfm-ror51-rubygem-activejob:
       version: 5.1.4
-    #tfm-ror51-rubygem-activemodel:
-    #  version: 5.1.4
+    tfm-ror51-rubygem-activemodel:
+      version: 5.1.4
     #tfm-ror51-rubygem-activerecord:
     #  version: 5.1.4
     tfm-ror51-rubygem-activesupport:
