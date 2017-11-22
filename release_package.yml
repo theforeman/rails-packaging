@@ -13,6 +13,7 @@
     - name: 'Get latest package info from copr'
       command: "copr-cli get-package @theforeman/tfm-ror51 --name {{ inventory_hostname }} --with-latest-build"
       register: copr_package_info
+      ignore_errors: true
 
     - name: 'Get latest package info from git'
       command: "rpmspec --query --define='dist .el7.centos' --queryformat=%{version}-%{release} --srpm packages/{{ inventory_hostname }}/{{ inventory_hostname }}.spec"
@@ -23,9 +24,15 @@
 
     - set_fact:
         copr_package_info: "{{ copr_package_info.stdout | from_json }}"
+      when: "'No package with name' not in copr_package_info.stderr"
 
     - set_fact:
         copr_package_version: "{{ copr_package_info['latest_build']['pkg_version'] }}"
+      when: "'No package with name' not in copr_package_info.stderr"
+
+    - set_fact:
+        copr_package_version: ""
+      when: "'No package with name' in copr_package_info.stderr"
 
     - debug:
         msg: "Git version:  {{ git_package_version }} \nCopr version: {{ copr_package_version }}"
