@@ -16,7 +16,7 @@
       ignore_errors: true
 
     - name: 'Get latest package info from git'
-      command: "rpmspec --query --define='dist .el7.centos' --queryformat=%{version}-%{release} --srpm packages/{{ inventory_hostname }}/{{ inventory_hostname }}.spec"
+      command: "rpmspec --query --undefine=dist --queryformat=%{version}-%{release} --srpm packages/{{ inventory_hostname }}/{{ inventory_hostname }}.spec"
       register: git_package_info
 
     - set_fact:
@@ -24,15 +24,15 @@
 
     - set_fact:
         copr_package_info: "{{ copr_package_info.stdout | from_json }}"
-      when: "'No package with name' not in copr_package_info.stderr"
+      when: copr_package_info | success
 
     - set_fact:
         copr_package_version: "{{ copr_package_info['latest_build']['pkg_version'] }}"
-      when: "'No package with name' not in copr_package_info.stderr"
+      when: copr_package_info | success
 
     - set_fact:
         copr_package_version: ""
-      when: "'No package with name' in copr_package_info.stderr"
+      when: copr_package_info | failed
 
     - debug:
         msg: "Git version:  {{ git_package_version }} \nCopr version: {{ copr_package_version }}"
@@ -43,4 +43,4 @@
         - include_tasks: tasks/tito_release.yml
 
         - include_tasks: tasks/build_wait_and_download.yml
-      when: git_package_version != copr_package_version
+      when: "git_package_version not in copr_package_version"
