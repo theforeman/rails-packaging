@@ -24,8 +24,8 @@ packages:
     tfm-ror51: {}
     #tfm-ror51-rubygem-actioncable:
     #  version: 5.1.4
-    #tfm-ror51-rubygem-actionmailer:
-    #  version: 5.1.4
+    tfm-ror51-rubygem-actionmailer:
+      version: 5.1.4
     tfm-ror51-rubygem-actionpack:
       version: 5.1.4
     tfm-ror51-rubygem-actionview:
