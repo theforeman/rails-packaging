@@ -26,8 +26,8 @@ packages:
     #  version: 5.1.4
     #tfm-ror51-rubygem-actionmailer:
     #  version: 5.1.4
-    #tfm-ror51-rubygem-actionpack:
-    #  version: 5.1.4
+    tfm-ror51-rubygem-actionpack:
+      version: 5.1.4
     #tfm-ror51-rubygem-actionview:
     #  version: 5.1.4
     tfm-ror51-rubygem-activejob:
