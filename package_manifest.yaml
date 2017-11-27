@@ -78,8 +78,8 @@ packages:
       version: 5.1.4
     tfm-ror51-rubygem-sprockets:
       version: 3.7.1
-    #tfm-ror51-rubygem-sprockets-rails:
-    #  version: 3.2.1
+    tfm-ror51-rubygem-sprockets-rails:
+      version: 3.2.1
     tfm-ror51-rubygem-thor:
       version: 0.20.0
     tfm-ror51-rubygem-thread_safe:
