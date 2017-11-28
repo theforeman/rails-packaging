@@ -6,13 +6,26 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 5.1.4
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Full-stack web application framework
 Group:   Development/Languages
 License: MIT
 URL:     http://rubyonrails.org
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
+Requires: %{?scl_prefix_ruby}ruby(release)
+Requires: %{?scl_prefix_ruby}ruby(rubygems)
+Requires: %{?scl_prefix}rubygem(actionmailer) = %{version}
+Requires: %{?scl_prefix}rubygem(actionpack) = %{version}
+Requires: %{?scl_prefix}rubygem(actionview) = %{version}
+Requires: %{?scl_prefix}rubygem(activejob) = %{version}
+Requires: %{?scl_prefix}rubygem(activemodel) = %{version}
+Requires: %{?scl_prefix}rubygem(activerecord) = %{version}
+Requires: %{?scl_prefix}rubygem(activesupport) = %{version}
+Requires: %{?scl_prefix_ruby}rubygem(bundler) >= 1.3.0
+Requires: %{?scl_prefix_ruby}rubygem(bundler) < 2.0
+Requires: %{?scl_prefix}rubygem(railties) = %{version}
+Requires: %{?scl_prefix}rubygem(sprockets-rails)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel >= 1.8.11
 BuildRequires: %{?scl_prefix_ruby}ruby >= 2.2.2

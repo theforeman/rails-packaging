@@ -6,13 +6,16 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 5.1.4
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: A toolkit for building modeling frameworks (part of Rails)
 Group:   Development/Languages
 License: MIT
 URL:     http://rubyonrails.org
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
+Requires: %{?scl_prefix_ruby}ruby(release)
+Requires: %{?scl_prefix_ruby}ruby(rubygems)
+Requires: %{?scl_prefix}rubygem(activesupport) = %{version}
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby >= 2.2.2

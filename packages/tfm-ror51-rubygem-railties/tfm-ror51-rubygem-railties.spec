@@ -6,17 +6,24 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 5.1.4
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Tools for creating, working with, and running Rails applications
 Group:   Development/Languages
 License: MIT
 URL:     http://rubyonrails.org
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
+Requires: %{?scl_prefix_ruby}ruby(release)
+Requires: %{?scl_prefix_ruby}ruby(rubygems)
+Requires: %{?scl_prefix_ruby}rubygem(rake)
+Requires: %{?scl_prefix}rubygem(thor)
+Requires: %{?scl_prefix}rubygem(method_source)
+Requires: %{?scl_prefix}rubygem(activesupport) = %{version}
+Requires: %{?scl_prefix}rubygem(actionpack) = %{version}
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby >= 2.2.2
-BuildRequires: %{?scl_prefix}rubygem(actionview) = 5.1.4
+BuildRequires: %{?scl_prefix}rubygem(actionview) = %{version}
 BuildArch: noarch
 Provides: %{?scl_prefix}rubygem(%{gem_name}) = %{version}
 

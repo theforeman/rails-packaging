@@ -6,17 +6,25 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 5.1.4
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Web-flow and rendering framework putting the VC in MVC (part of Rails)
 Group:   Development/Languages
 License: MIT
 URL:     http://rubyonrails.org
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
+Requires: %{?scl_prefix_ruby}ruby(release)
+Requires: %{?scl_prefix_ruby}ruby(rubygems)
+Requires: %{?scl_prefix}rubygem(rails-dom-testing)
+Requires: %{?scl_prefix}rubygem(rails-html-sanitizer)
+Requires: %{?scl_prefix}rubygem(rack)
+Requires: %{?scl_prefix}rubygem(rack-test)
+Requires: %{?scl_prefix}rubygem(actionview) = %{version}
+Requires: %{?scl_prefix}rubygem(activesupport) = %{version}
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby >= 2.2.2
-BuildRequires: %{?scl_prefix}rubygem(activemodel) = 5.1.4
+BuildRequires: %{?scl_prefix}rubygem(activemodel) = %{version}
 BuildArch: noarch
 Provides: %{?scl_prefix}rubygem(%{gem_name}) = %{version}
 
