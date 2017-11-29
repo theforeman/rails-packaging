@@ -80,6 +80,8 @@ packages:
       version: 5.1.4
     tfm-ror51-rubygem-sass:
       version: 3.5.3
+    tfm-ror51-rubygem-sass-rails:
+      version: 5.0.7
     tfm-ror51-rubygem-sqlite3:
       version: 1.3.13
     tfm-ror51-rubygem-sprockets:
