@@ -18,10 +18,10 @@ Source0: <%= download_path %>%{gem_name}-%{version}.gem
 Requires: %{?scl_prefix_ruby}ruby(release)
 Requires: %{?scl_prefix_ruby}ruby(rubygems)
 <% for d in spec.runtime_dependencies -%>
-<% if d.include?('active') -%>
-Requires: %{?scl_prefix}rubygem(d.name) = %{version}
+<% if d.name.include?('active') -%>
+Requires: %{?scl_prefix}rubygem(<%= d.name %>) = %{version}
 <% else -%>
-Requires: %{?scl_prefix}rubygem(d.name)
+Requires: %{?scl_prefix}rubygem(<%= d.name %>)
 <% end -%>
 <% end -%>
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
