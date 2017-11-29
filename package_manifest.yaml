@@ -86,6 +86,8 @@ packages:
       version: 3.7.1
     tfm-ror51-rubygem-sprockets-rails:
       version: 3.2.1
+    tfm-ror51-rubygem-tilt:
+      version: 2.0.8
     tfm-ror51-rubygem-thor:
       version: 0.20.0
     tfm-ror51-rubygem-thread_safe:
