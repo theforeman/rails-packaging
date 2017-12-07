@@ -42,6 +42,8 @@ packages:
       version: 8.0.0
     tfm-ror51-rubygem-builder:
       version: 3.2.3
+    tfm-ror51-rubygem-coffee-rails:
+      version: 4.2.2
     tfm-ror51-rubygem-coffee-script:
       version: 2.4.1
     tfm-ror51-rubygem-coffee-script-source:
