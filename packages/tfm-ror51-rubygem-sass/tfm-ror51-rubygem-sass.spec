@@ -5,7 +5,7 @@
 %global gem_name sass
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
-Version: 3.5.3
+Version: 3.4.25
 Release: 1%{?dist}
 Summary: A powerful but elegant CSS compiler that makes CSS fun again
 Group:   Development/Languages
@@ -42,6 +42,12 @@ Documentation for %{name}.
 %{?scl:scl enable %{scl} - << \EOF}
 %gem_install -n %{SOURCE0}
 %{?scl:EOF}
+
+pushd .%{gem_instdir}
+# Remove bundled rubygem-listener:
+# https://github.com/nex3/sass/issues/458
+rm -rf vendor
+popd
 
 %build
 
