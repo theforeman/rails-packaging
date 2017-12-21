@@ -70,6 +70,8 @@ packages:
       version: 0.9.0
     tfm-ror51-rubygem-mime-types:
       version: 3.1
+    tfm-ror51-rubygem-mime-types-data:
+      version: 3.2016.0521
     tfm-ror51-rubygem-mini_mime:
       version: 1.0.0
     tfm-ror51-rubygem-multi_json:
