@@ -6,13 +6,14 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 1.2.4
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Daylight savings aware timezone library
 Group:   Development/Languages
 License: MIT
 URL:     http://tzinfo.github.io
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
+Requires:      %{?scl_prefix}rubygem(thread_safe)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby >= 1.8.7
