@@ -6,13 +6,16 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 2.1.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Loofah is a general library for manipulating and transforming HTML/XML documents and fragments
 Group:   Development/Languages
 License: MIT
 URL:     https://github.com/flavorjones/loofah
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
+Requires: %{?scl_prefix}rubygem(nokogiri) >= 1.5.9
+Requires: %{?scl_prefix}rubygem(crass) >= 1.0.2
+Requires: %{?scl_prefix}rubygem(crass) < 1.1.0
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby
