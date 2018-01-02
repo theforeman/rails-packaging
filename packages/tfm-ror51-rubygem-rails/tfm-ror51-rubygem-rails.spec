@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 5.1.4
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: Full-stack web application framework
 Group:   Development/Languages
 License: MIT
@@ -15,6 +15,7 @@ Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
 Requires: %{?scl_prefix_ruby}ruby(release)
 Requires: %{?scl_prefix_ruby}ruby(rubygems)
+Requires: %{?scl_prefix}rubygem(actioncable) = %{version}
 Requires: %{?scl_prefix}rubygem(actionmailer) = %{version}
 Requires: %{?scl_prefix}rubygem(actionpack) = %{version}
 Requires: %{?scl_prefix}rubygem(actionview) = %{version}
