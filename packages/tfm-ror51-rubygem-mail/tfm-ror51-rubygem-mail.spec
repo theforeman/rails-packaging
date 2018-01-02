@@ -6,13 +6,14 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 2.7.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Mail provides a nice Ruby DSL for making, sending and reading emails
 Group:   Development/Languages
 License: MIT
 URL:     https://github.com/mikel/mail
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
+Requires: %{?scl_prefix}rubygem(mini_mime)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby

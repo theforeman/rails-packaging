@@ -6,13 +6,14 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 0.9.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: New wave Internationalization support for Ruby
 Group:   Development/Languages
 License: MIT
 URL:     http://github.com/svenfuchs/i18n
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
+Requires: %{?scl_prefix}rubygem(concurrent-ruby)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel >= 1.3.5
 BuildRequires: %{?scl_prefix_ruby}ruby >= 1.9.3
