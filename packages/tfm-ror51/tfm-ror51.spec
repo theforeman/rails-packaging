@@ -1,7 +1,7 @@
 %global scl_name_prefix tfm-
 %global scl_name_base ror
 %global scl_name_version 51
-
+%global scl_vendor theforeman
 %global scl %{scl_name_prefix}%{scl_name_base}%{scl_name_version}
 
 # Fallback to rh-ruby24. rh-ruby24-scldevel is probably not available in
@@ -20,7 +20,7 @@
 
 Summary: Package that installs %scl
 Name:    %scl_name
-Version: 1.0
+Version: 1.1
 Release: 1%{?dist}
 License: GPLv2+
 Source0: README
