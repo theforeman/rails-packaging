@@ -6,13 +6,14 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 1.0.3
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: This gem is responsible to sanitize HTML fragments in Rails applications
 Group:   Development/Languages
 License: MIT
 URL:     https://github.com/rails/rails-html-sanitizer
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
+Requires:      %{?scl_prefix}rubygem(loofah)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby
