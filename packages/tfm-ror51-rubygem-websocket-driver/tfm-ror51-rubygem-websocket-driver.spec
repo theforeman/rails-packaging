@@ -6,13 +6,14 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 0.6.5
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: WebSocket protocol handler with pluggable I/O
 Group:   Development/Languages
 License: MIT
 URL:     https://github.com/faye/websocket-driver-ruby
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
+Requires: %{?scl_prefix}rubygem(websocket-extensions)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby-devel
