@@ -9,7 +9,7 @@ all:
       - dist: epel-7-x86_64
         external_repos:
           - http://mirror.centos.org/centos/7/sclo/x86_64/rh/
-          - https://copr-be.cloud.fedoraproject.org/results/@theforeman/tfm-ror51/epel-7-$basearch/
+          - https://copr-be.cloud.fedoraproject.org/results/@theforeman/tfm-ror51-staging/epel-7-$basearch/
         packages:
           - scl-utils-build
           - rh-ruby24-build

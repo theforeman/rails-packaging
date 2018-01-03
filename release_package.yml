@@ -11,7 +11,7 @@
   gather_facts: no
   tasks:
     - name: 'Get latest package info from copr'
-      command: "copr-cli get-package @theforeman/tfm-ror51 --name {{ inventory_hostname }} --with-latest-build"
+      command: "copr-cli get-package @theforeman/tfm-ror51-staging --name {{ inventory_hostname }} --with-latest-build"
       register: copr_package_info
       ignore_errors: true
 
