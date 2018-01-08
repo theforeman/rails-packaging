@@ -1,33 +1,30 @@
-# Generated from rack-protection-2.0.0.gem by gem2rpm -*- rpm-spec -*-
+# Generated from mustermann-1.0.1.gem by gem2rpm -*- rpm-spec -*-
 %{?scl:%scl_package rubygem-%{gem_name}}
 %{!?scl:%global pkg_name %{name}}
 
-%global gem_name rack-protection
+%global gem_name mustermann
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
-Version: 2.0.0
+Version: 1.0.1
 Release: 1%{?dist}
-Summary: Protect against typical web attacks, works with all Rack apps, including Rails
+Summary: Your personal string matching expert
 Group:   Development/Languages
 License: MIT
-URL:     http://github.com/sinatra/sinatra/tree/master/rack-protection
+URL:     https://github.com/sinatra/mustermann
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
 Requires: %{?scl_prefix_ruby}ruby(release)
 Requires: %{?scl_prefix_ruby}ruby(rubygems)
-Requires: %{?scl_prefix}rubygem(rack)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
-BuildRequires: %{?scl_prefix_ruby}ruby
-BuildRequires: %{?scl_prefix_ror}rubygem(rack-test)
+BuildRequires: %{?scl_prefix_ruby}ruby >= 2.2.0
 BuildArch: noarch
 Provides: %{?scl_prefix}rubygem(%{gem_name}) = %{version}
 
 %{?scl:Requires: %{?scl_prefix}runtime}
 
 %description
-Protect against typical web attacks, works with all Rack apps, including
-Rails.
+A library implementing patterns that behave like regular expressions.
 
 
 %package doc
@@ -57,18 +54,18 @@ cp -a .%{gem_dir}/* \
 
 %files
 %dir %{gem_instdir}
-%license %{gem_instdir}/License
+%license %{gem_instdir}/LICENSE
+%{gem_instdir}/bench
 %{gem_libdir}
-%exclude %{gem_instdir}/rack-protection.gemspec
+%exclude %{gem_instdir}/mustermann.gemspec
 %exclude %{gem_cache}
 %{gem_spec}
 
 %files doc
 %doc %{gem_docdir}
-%{gem_instdir}/Gemfile
 %doc %{gem_instdir}/README.md
-%{gem_instdir}/Rakefile
+%{gem_instdir}/spec
 
 %changelog
-* Sun Jan 07 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.0.0-1
+* Sun Jan 07 2018 Eric D. Helms <ericdhelms@gmail.com> - 1.0.1-1
 - Initial package

@@ -76,6 +76,8 @@ packages:
       version: 1.0.0
     tfm-ror51-rubygem-multi_json:
       version: 1.12.2
+    tfm-ror51-rubygem-mustermann:
+      version: 1.0.1
     tfm-ror51-rubygem-nio4r:
       version: 2.1.0
     tfm-ror51-rubygem-nokogiri:
