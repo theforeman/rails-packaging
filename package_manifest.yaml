@@ -5,15 +5,33 @@ localhost:
 
 all:
   vars:
-    chroots:
-      - dist: epel-7-x86_64
-        external_repos:
-          - http://mirror.centos.org/centos/7/sclo/x86_64/rh/
-          - https://copr-be.cloud.fedoraproject.org/results/@theforeman/tfm-ror51-staging/epel-7-$basearch/
-        packages:
-          - scl-utils-build
-          - rh-ruby24-build
-          - tfm-ror51-build
+    scl: tfm-ror51
+    copr_user: "@theforeman"
+    diff_package_copr_repo: tfm-ror51-staging
+    diff_package_type: copr
+    build_package_build_system: copr
+    build_package_scratch_repo: tfm-ror51-scratch
+    copr_repo_chroot: epel-7-x86_64
+    copr_repo_external_repos:
+      - http://mirror.centos.org/centos/7/sclo/x86_64/rh/
+      - https://copr-be.cloud.fedoraproject.org/results/@theforeman/tfm-ror51-staging/epel-7-$basearch/
+    copr_repo_packages:
+      - scl-utils-build
+      - rh-ruby24-build
+      - tfm-ror51-build
+
+repoclosures:
+  hosts:
+    el7:
+      repoclosure_config: repoclosure/el7.conf
+      repoclosure_target_repo: scratch
+      repoclosure_additional_repos:
+        - name: scratch
+          url: https://copr-be.cloud.fedoraproject.org/results/{{ copr_repo }}/epel-7-x86_64/
+      repoclosure_lookaside_repos:
+        - el7-base
+        - el7-scl
+        - tfm-ror51-staging
 
 packages:
   vars:
