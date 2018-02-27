@@ -5,7 +5,7 @@
 %global gem_name uglifier
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
-Version: 3.2.0
+Version: 4.1.6
 Release: 1%{?dist}
 Summary: Ruby wrapper for UglifyJS JavaScript compressor
 Group:   Development/Languages
@@ -78,5 +78,8 @@ cp -a .%{gem_dir}/* \
 %{gem_instdir}/Rakefile
 
 %changelog
+* Tue Feb 27 2018 Michael Moll <mmoll@mmoll.at> - 4.1.6-1
+- Update to 4.1.6
+
 * Wed Nov 29 2017 Eric D. Helms <ericdhelms@gmail.com> - 3.2.0-1
 - Initial package
