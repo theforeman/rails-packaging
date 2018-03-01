@@ -9,6 +9,7 @@ all:
     copr_user: "@theforeman"
     diff_package_copr_repo: tfm-ror51-staging
     diff_package_type: copr
+    diff_package_skip: false
     build_package_build_system: copr
     build_package_scratch_repo: tfm-ror51-scratch
     copr_repo_chroot: epel-7-x86_64
