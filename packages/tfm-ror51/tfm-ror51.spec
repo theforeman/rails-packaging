@@ -3,6 +3,7 @@
 %global scl_name_version 51
 %global scl_vendor theforeman
 %global scl %{scl_name_prefix}%{scl_name_base}%{scl_name_version}
+%global _scl_prefix /opt/%{scl_vendor}
 
 # Fallback to rh-ruby24. rh-ruby24-scldevel is probably not available in
 # the buildroot.
@@ -21,7 +22,7 @@
 Summary: Package that installs %scl
 Name:    %scl_name
 Version: 1.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPLv2+
 Source0: README
 Source1: LICENSE
@@ -97,6 +98,12 @@ EOF
 cat >> %{buildroot}%{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel << EOF
 %%scl_%{scl_name_base} %{scl}
 %%scl_prefix_%{scl_name_base} %{scl_prefix}
+EOF
+
+# additional rpm macros for builds in the collection to set the vendor correctly
+cat >> %{buildroot}%{_root_sysconfdir}/rpm/macros.%{scl_name}-config << EOF
+%%scl_vendor %{scl_vendor}
+%%_scl_prefix %{_scl_prefix}
 EOF
 
 # Install generated man page.
