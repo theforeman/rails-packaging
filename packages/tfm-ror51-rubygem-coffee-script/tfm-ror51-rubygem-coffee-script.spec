@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 2.4.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Ruby CoffeeScript Compiler
 Group:   Development/Languages
 License: MIT
@@ -67,5 +67,8 @@ cp -a .%{gem_dir}/* \
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.4.1-2
+- rebuilt
+
 * Thu Dec 07 2017 Ondrej Prazak - 2.4.1-1
 - Initial package

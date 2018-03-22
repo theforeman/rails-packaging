@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 5.1.4
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: Email composition, delivery, and receiving framework (part of Rails)
 Group:   Development/Languages
 License: MIT
@@ -72,5 +72,8 @@ cp -a .%{gem_dir}/* \
 %doc %{gem_instdir}/README.rdoc
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.1.4-3
+- rebuilt
+
 * Wed Nov 22 2017 Eric D. Helms <ericdhelms@gmail.com> - 5.1.4-1
 - Initial package

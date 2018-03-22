@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 2.7.0
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: Mail provides a nice Ruby DSL for making, sending and reading emails
 Group:   Development/Languages
 License: MIT
@@ -63,5 +63,8 @@ cp -a .%{gem_dir}/* \
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.7.0-3
+- rebuilt
+
 * Mon Nov 20 2017 Eric D. Helms <ericdhelms@gmail.com> - 2.7.0-1
 - Initial package

@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 2.1.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: jQuery plugin for drop-in fix binded events problem caused by Turbolinks
 Group:   Development/Languages
 License: MIT
@@ -78,5 +78,8 @@ cp -a .%{gem_dir}/* \
 %{gem_instdir}/spec
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.1.0-2
+- rebuilt
+
 * Thu Dec 07 2017 Ondrej Prazak - 2.1.0-1
 - Initial package

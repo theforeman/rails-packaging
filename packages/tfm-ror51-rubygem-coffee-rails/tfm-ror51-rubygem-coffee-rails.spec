@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 4.2.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: CoffeeScript adapter for the Rails asset pipeline
 Group:   Development/Languages
 License: MIT
@@ -67,5 +67,8 @@ cp -a .%{gem_dir}/* \
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 4.2.2-2
+- rebuilt
+
 * Thu Dec 07 2017 Ondrej Prazak - 4.2.2-1
 - Initial package

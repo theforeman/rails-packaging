@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 0.1.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Generic extension manager for WebSocket connections
 Group:   Development/Languages
 License: MIT
@@ -62,5 +62,8 @@ cp -a .%{gem_dir}/* \
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 0.1.2-2
+- rebuilt
+
 * Tue Nov 21 2017 Eric D. Helms <ericdhelms@gmail.com> - 0.1.2-1
 - Initial package

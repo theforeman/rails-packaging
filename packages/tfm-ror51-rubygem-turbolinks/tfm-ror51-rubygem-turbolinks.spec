@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 2.5.4
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Turbolinks makes following links in your web application faster (use with Rails Asset Pipeline)
 Group:   Development/Languages
 License: MIT
@@ -67,5 +67,8 @@ cp -a .%{gem_dir}/* \
 %{gem_instdir}/test
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.5.4-2
+- rebuilt
+
 * Thu Dec 07 2017 Ondrej Prazak - 2.5.4-1
 - Initial package

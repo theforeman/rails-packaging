@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 5.1.4
-Release: 3%{?dist}
+Release: 4%{?dist}
 Summary: Full-stack web application framework
 Group:   Development/Languages
 License: MIT
@@ -77,5 +77,8 @@ cp -a .%{gem_dir}/* \
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.1.4-4
+- rebuilt
+
 * Wed Nov 22 2017 Eric D. Helms <ericdhelms@gmail.com> - 5.1.4-1
 - Initial package

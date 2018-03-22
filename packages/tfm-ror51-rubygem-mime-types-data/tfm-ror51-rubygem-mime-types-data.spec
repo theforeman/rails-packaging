@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 3.2016.0521
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: mime-types-data provides a registry for information about MIME media type definitions
 Group:   Development/Languages
 License: MIT
@@ -73,5 +73,8 @@ cp -a .%{gem_dir}/* \
 %{gem_instdir}/Rakefile
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 3.2016.0521-2
+- rebuilt
+
 * Thu Dec 21 2017 Eric D. Helms <ericdhelms@gmail.com> - 3.2016.0521-1
 - Initial package

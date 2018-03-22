@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 4.1.6
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Ruby wrapper for UglifyJS JavaScript compressor
 Group:   Development/Languages
 License: MIT
@@ -78,6 +78,9 @@ cp -a .%{gem_dir}/* \
 %{gem_instdir}/Rakefile
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 4.1.6-2
+- rebuilt
+
 * Tue Feb 27 2018 Michael Moll <mmoll@mmoll.at> - 4.1.6-1
 - Update to 4.1.6
 

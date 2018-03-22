@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 8.0.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Arel Really Exasperates Logicians  Arel is a SQL AST manager for Ruby
 Group:   Development/Languages
 License: MIT
@@ -78,5 +78,8 @@ popd
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 8.0.0-2
+- rebuilt
+
 * Fri Nov 10 2017 Eric D. Helms <ericdhelms@gmail.com> - 8.0.0-1
 - Initial package

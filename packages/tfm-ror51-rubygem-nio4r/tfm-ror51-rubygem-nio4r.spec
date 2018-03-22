@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 2.1.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: New IO for Ruby
 Group:   Development/Languages
 License: MIT
@@ -82,5 +82,8 @@ rm -rf %{buildroot}%{gem_instdir}/ext/
 %{gem_instdir}/spec
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.1.0-2
+- rebuilt
+
 * Tue Nov 21 2017 Eric D. Helms <ericdhelms@gmail.com> - 2.1.0-1
 - Initial package

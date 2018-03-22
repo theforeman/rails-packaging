@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 0.9.1
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: New wave Internationalization support for Ruby
 Group:   Development/Languages
 License: MIT
@@ -65,5 +65,8 @@ cp -a .%{gem_dir}/* \
 %{gem_instdir}/test
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 0.9.1-3
+- rebuilt
+
 * Mon Nov 20 2017 Eric D. Helms <ericdhelms@gmail.com> - 0.9.1-1
 - Initial package

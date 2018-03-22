@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 3.2.3
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Builders for MarkUp
 Group:   Development/Languages
 License: MIT
@@ -77,5 +77,8 @@ popd
 %{gem_instdir}/test
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 3.2.3-2
+- rebuilt
+
 * Mon Nov 20 2017 Eric D. Helms <ericdhelms@gmail.com> - 3.2.3-1
 - Initial package

@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 2.0.8
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Generic interface to multiple Ruby template engines
 Group:   Development/Languages
 License: MIT
@@ -78,5 +78,8 @@ find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 %{gem_instdir}/test
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.0.8-2
+- rebuilt
+
 * Wed Nov 29 2017 Eric D. Helms <ericdhelms@gmail.com> - 2.0.8-1
 - Initial package

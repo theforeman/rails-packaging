@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 0.6.5
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: WebSocket protocol handler with pluggable I/O
 Group:   Development/Languages
 License: MIT
@@ -68,5 +68,8 @@ rm -rf %{buildroot}%{gem_instdir}/ext/
 %{gem_instdir}/examples
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 0.6.5-3
+- rebuilt
+
 * Tue Nov 21 2017 Eric D. Helms <ericdhelms@gmail.com> - 0.6.5-1
 - Initial package

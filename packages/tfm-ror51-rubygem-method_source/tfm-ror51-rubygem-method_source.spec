@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 0.9.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: retrieve the sourcecode for a method
 Group:   Development/Languages
 License: MIT
@@ -66,5 +66,8 @@ cp -a .%{gem_dir}/* \
 %{gem_instdir}/spec
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 0.9.0-2
+- rebuilt
+
 * Mon Nov 20 2017 Eric D. Helms <ericdhelms@gmail.com> - 0.9.0-1
 - Initial package

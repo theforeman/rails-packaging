@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 0.4.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Refer to any model with a URI: gid://app/class/id
 Group:   Development/Languages
 License: MIT
@@ -62,5 +62,8 @@ cp -a .%{gem_dir}/* \
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 0.4.1-2
+- rebuilt
+
 * Mon Nov 20 2017 Eric D. Helms <ericdhelms@gmail.com> - 0.4.1-1
 - Initial package

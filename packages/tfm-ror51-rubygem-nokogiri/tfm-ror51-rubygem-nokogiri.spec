@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 1.8.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser
 Group:   Development/Languages
 License: MIT
@@ -124,5 +124,8 @@ find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 1.8.1-2
+- rebuilt
+
 * Tue Nov 21 2017 Eric D. Helms <ericdhelms@gmail.com> - 1.8.1-1
 - Initial package

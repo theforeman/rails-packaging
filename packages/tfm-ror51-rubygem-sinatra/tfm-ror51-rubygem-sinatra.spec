@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 2.0.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Classy web-development dressed in a DSL
 Group:   Development/Languages
 License: MIT
@@ -89,5 +89,8 @@ cp -a .%{gem_dir}/* \
 %{gem_instdir}/examples
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.0.0-2
+- rebuilt
+
 * Sun Jan 07 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.0.0-1
 - Initial package

@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 1.12.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: The CoffeeScript Compiler
 Group:   Development/Languages
 License: MIT
@@ -67,5 +67,8 @@ cp -a .%{gem_dir}/* \
 
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 1.12.2-2
+- rebuilt
+
 * Thu Dec 07 2017 Ondrej Prazak - 1.12.2-1
 - Initial package

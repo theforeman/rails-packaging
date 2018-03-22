@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 3.2.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Sprockets Rails integration
 Group:   Development/Languages
 License: MIT
@@ -63,5 +63,8 @@ cp -a .%{gem_dir}/* \
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 3.2.1-2
+- rebuilt
+
 * Mon Nov 27 2017 Eric D. Helms <ericdhelms@gmail.com> - 3.2.1-1
 - Initial package

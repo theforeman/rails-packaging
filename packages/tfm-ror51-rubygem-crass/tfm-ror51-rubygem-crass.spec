@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 1.0.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: CSS parser based on the CSS Syntax Level 3 spec
 Group:   Development/Languages
 License: MIT
@@ -67,5 +67,8 @@ cp -a .%{gem_dir}/* \
 %{gem_instdir}/test
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 1.0.2-2
+- rebuilt
+
 * Mon Nov 20 2017 Eric D. Helms <ericdhelms@gmail.com> - 1.0.2-1
 - Initial package

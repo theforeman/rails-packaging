@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 1.0.3
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: This gem is responsible to sanitize HTML fragments in Rails applications
 Group:   Development/Languages
 License: MIT
@@ -65,5 +65,8 @@ cp -a .%{gem_dir}/* \
 %{gem_instdir}/test
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 1.0.3-3
+- rebuilt
+
 * Tue Nov 21 2017 Eric D. Helms <ericdhelms@gmail.com> - 1.0.3-1
 - Initial package

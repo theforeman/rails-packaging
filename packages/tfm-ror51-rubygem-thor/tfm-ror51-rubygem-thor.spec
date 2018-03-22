@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 0.20.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Thor is a toolkit for building powerful command-line interfaces
 Group:   Development/Languages
 License: MIT
@@ -72,5 +72,8 @@ find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 0.20.0-2
+- rebuilt
+
 * Mon Nov 20 2017 Eric D. Helms <ericdhelms@gmail.com> - 0.20.0-1
 - Initial package
