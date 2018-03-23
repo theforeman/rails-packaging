@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 5.1.4
-Release: 3%{?dist}
+Release: 4%{?dist}
 Summary: Rendering framework putting the V in MVC (part of Rails)
 Group:   Development/Languages
 License: MIT
@@ -24,7 +24,6 @@ Requires: %{?scl_prefix}rubygem(activesupport) = %{version}
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby >= 2.2.2
-BuildRequires: %{?scl_prefix}rubygem(actionpack) = %{version}
 BuildRequires: %{?scl_prefix}rubygem(activemodel) = %{version}
 BuildArch: noarch
 Provides: %{?scl_prefix}rubygem(%{gem_name}) = %{version}
