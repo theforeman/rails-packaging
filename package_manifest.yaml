@@ -114,7 +114,7 @@ packages:
     tfm-ror51-rubygem-rails-html-sanitizer:
       version: 1.0.3
     tfm-ror51-rubygem-railties:
-      version: 5.1.4
+      version: 5.1.6
     tfm-ror51-rubygem-sass:
       version: 3.5.3
     tfm-ror51-rubygem-sass-rails:
