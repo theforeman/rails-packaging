@@ -5,8 +5,8 @@
 %global gem_name activerecord
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
-Version: 5.1.4
-Release: 3%{?dist}
+Version: 5.1.6
+Release: 1%{?dist}
 Summary: Object-relational mapper framework (part of Rails)
 Group:   Development/Languages
 License: MIT
@@ -71,6 +71,9 @@ cp -a .%{gem_dir}/* \
 %{gem_instdir}/examples
 
 %changelog
+* Tue Apr 03 2018 Eric D. Helms <ericdhelms@gmail.com> 5.1.6-1
+- Release tfm-ror51-rubygem-activerecord 5.1.6
+
 * Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.1.4-3
 - rebuilt
 

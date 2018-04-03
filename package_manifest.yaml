@@ -54,7 +54,7 @@ packages:
     tfm-ror51-rubygem-activemodel:
       version: 5.1.6
     tfm-ror51-rubygem-activerecord:
-      version: 5.1.4
+      version: 5.1.6
     tfm-ror51-rubygem-activesupport:
       version: 5.1.6
     tfm-ror51-rubygem-arel:
