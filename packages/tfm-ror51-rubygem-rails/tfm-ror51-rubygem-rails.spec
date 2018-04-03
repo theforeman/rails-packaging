@@ -5,8 +5,8 @@
 %global gem_name rails
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
-Version: 5.1.4
-Release: 4%{?dist}
+Version: 5.1.6
+Release: 1%{?dist}
 Summary: Full-stack web application framework
 Group:   Development/Languages
 License: MIT
@@ -77,6 +77,9 @@ cp -a .%{gem_dir}/* \
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Tue Apr 03 2018 Eric D. Helms <ericdhelms@gmail.com> 5.1.6-1
+- Release tfm-ror51-rubygem-rails 5.1.6
+
 * Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.1.4-4
 - rebuilt
 
