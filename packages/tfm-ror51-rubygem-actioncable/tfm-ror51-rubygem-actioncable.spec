@@ -5,8 +5,8 @@
 %global gem_name actioncable
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
-Version: 5.1.4
-Release: 3%{?dist}
+Version: 5.1.6
+Release: 1%{?dist}
 Summary: WebSocket framework for Rails
 Group:   Development/Languages
 License: MIT
@@ -69,6 +69,9 @@ cp -a .%{gem_dir}/* \
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Tue Apr 03 2018 Eric D. Helms <ericdhelms@gmail.com> 5.1.6-1
+- Release tfm-ror51-rubygem-actioncable 5.1.6
+
 * Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.1.4-3
 - rebuilt
 
