@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 1.0.5
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: Modern concurrency tools for Ruby. Inspired by Erlang, Clojure, Scala, Haskell, F#, C#, Java, and classic concurrency patterns
 Group:   Development/Languages
 License: MIT
@@ -18,6 +18,8 @@ BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby >= 1.9.3
 BuildArch: noarch
 Provides: %{?scl_prefix}rubygem(%{gem_name}) = %{version}
+Obsoletes: tfm-rubygem-%{gem_name} < 1.0.5-3
+Obsoletes: tfm-rubygem(%{gem_name}) < 1.0.5-3
 
 %{?scl:Requires: %{?scl_prefix}runtime}
 
@@ -66,6 +68,9 @@ cp -a .%{gem_dir}/* \
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Mon May 14 2018 Evgeni Golov - 1.0.5-3
+- Obsolete the plain tfm version of this gem, as we moved it to the tfm-ror51 SCL.
+
 * Thu Mar 22 2018 Eric D. Helms <ericdhelms@gmail.com> - 1.0.5-2
 - rebuilt
 
