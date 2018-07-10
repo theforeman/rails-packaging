@@ -8,14 +8,13 @@ repoclosures:
     el7:
       repoclosure_config: repoclosure/el7.conf
       repoclosure_target_repo: scratch
-      repoclosure_additional_repos:
-        - name: scratch
-          url: https://copr-be.cloud.fedoraproject.org/results/{{ copr_repo }}/epel-7-x86_64/
       repoclosure_lookaside_repos:
         - el7-base
         - el7-scl
-        - tfm-ror52
 
 packages:
+  vars:
+    releasers:
+      - koji
   hosts:
     tfm-ror52: {}

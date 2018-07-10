@@ -1,9 +1,8 @@
 [buildconfig]
-builder = git_annex_spec_builder.GitAnnexSpecBuilder
+builder = obal.tito_extensions.git_annex_spec_builder.GitAnnexSpecBuilder
 tagger = tito.tagger.ReleaseTagger
 changelog_do_not_remove_cherrypick = 0
 changelog_format = %s (%ae)
-lib_dir = .tito/lib/
 
 [copr-nightly]
 disttag = .el7
