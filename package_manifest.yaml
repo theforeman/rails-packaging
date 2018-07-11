@@ -16,5 +16,35 @@ packages:
   vars:
     releasers:
       - koji
+    gem_name: "{{ inventory_hostname.replace('tfm-ror52-rubygem-', '') }}"
+    rubygem_spec_template: "gem2rpm/scl-rubygem-GEM.spec.template"
   hosts:
     tfm-ror52: {}
+    tfm-ror52-rubygem-arel:
+      version: 9.0.0
+    tfm-ror52-rubygem-builder:
+      version: 3.2.3
+    tfm-ror52-rubygem-concurrent-ruby:
+      version: 1.0.5
+    tfm-ror52-rubygem-crass:
+      version: 1.0.4
+    tfm-ror52-rubygem-erubi:
+      version: 1.7.1
+    tfm-ror52-rubygem-method_source:
+      version: 0.9.0
+    tfm-ror52-rubygem-mimemagic:
+      version: 0.3.2
+    tfm-ror52-rubygem-mini_mime:
+      version: 1.0.0
+    tfm-ror52-rubygem-mini_portile2:
+      version: 2.3.0
+    tfm-ror52-rubygem-nio4r:
+      version: 2.3.1
+    tfm-ror52-rubygem-rack:
+      version: 2.0.5
+    tfm-ror52-rubygem-thor:
+      version: 0.20.0
+    tfm-ror52-rubygem-thread_safe:
+      version: 0.3.6
+    tfm-ror52-rubygem-websocket-extensions:
+      version: 0.1.3
