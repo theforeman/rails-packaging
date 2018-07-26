@@ -13,6 +13,9 @@
     <packagelist>
       <packagereq type="default">tfm-ror52</packagereq>
       <packagereq type="default">tfm-ror52-build</packagereq>
+      <packagereq type="default">tfm-ror52-runtime</packagereq>
+      <packagereq type="default">tfm-ror52-runtime-assets</packagereq>
+      <packagereq type="default">tfm-ror52-scldevel</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-arel</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-builder</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-concurrent-ruby</packagereq>
