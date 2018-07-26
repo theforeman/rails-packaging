@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE comps PUBLIC "-//Red Hat, Inc.//DTD Comps info//EN" "comps.dtd">
+
+<comps>
+  <!--  <meta> -->
+  <!-- Meta information will go here eventually -->
+  <!--  </meta> -->
+  <group>
+    <id>tfm-ror52</id>
+    <name>Rails 5.2 SCL</name>
+    <description>Rails 5.2 SCL Packages</description>
+    <uservisible>true</uservisible>
+    <packagelist>
+      <packagereq type="default">tfm-ror52</packagereq>
+      <packagereq type="default">tfm-ror52-build</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-arel</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-builder</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-concurrent-ruby</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-crass</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-erubi</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-method_source</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-mimemagic</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-mini_mime</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-mini_portile2</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-nio4r</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-rack</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-thor</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-thread_safe</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-websocket-extensions</packagereq>
+    </packagelist>
+  </group>
+</comps>
