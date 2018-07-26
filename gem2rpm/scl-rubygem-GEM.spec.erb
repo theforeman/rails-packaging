@@ -60,16 +60,31 @@ Documentation for %{name}.
 <% end # if doc_subpackage -%>
 
 %prep
-%setup -n %{pkg_name}-%{version} -q -c -T
 %{?scl:scl enable %{scl} - << \EOF}
-%gem_install -n %{SOURCE0}
+gem unpack %{SOURCE0}
+%{?scl:EOF}
+
+%setup -q -D -T -n  %{gem_name}-%{version}
+
+%{?scl:scl enable %{scl} - << \EOF}
+gem spec %{SOURCE0} -l --ruby > %{gem_name}.gemspec
 %{?scl:EOF}
 
 %build
+# Create the gem as gem install only works on a gem file
+%{?scl:scl enable %{scl} - << \EOF}
+gem build %{gem_name}.gemspec
+%{?scl:EOF}
+
+# %%gem_install compiles any C extensions and installs the gem into ./%%gem_dir
+# by default, so that we can move it into the buildroot in %%install
+%{?scl:scl enable %{scl} - << \EOF}
+%gem_install
+%{?scl:EOF}
 
 %install
 mkdir -p %{buildroot}%{gem_dir}
-cp -a .%{gem_dir}/* \
+cp -pa .%{gem_dir}/* \
         %{buildroot}%{gem_dir}/
 
 <% unless spec.extensions.empty? -%>
@@ -80,15 +95,12 @@ cp -a .%{gem_extdir_mri}/{gem.build_complete,*.so} %{buildroot}%{gem_extdir_mri}
 # Prevent dangling symlink in -debuginfo (rhbz#878863).
 rm -rf %{buildroot}%{gem_instdir}/<%= ext.split(File::SEPARATOR).first %>/
 <% end -%>
-<% end -%>
 
+<% end -%>
 <% unless spec.executables.nil? or spec.executables.empty? -%>
 mkdir -p %{buildroot}%{_bindir}
 cp -pa .%{_bindir}/* \
         %{buildroot}%{_bindir}/
-<% end -%>
-
-<% unless spec.executables.empty? -%>
 find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 <% end -%>
 

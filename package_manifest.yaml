@@ -17,7 +17,7 @@ packages:
     releasers:
       - koji
     gem_name: "{{ inventory_hostname.replace('tfm-ror52-rubygem-', '') }}"
-    rubygem_spec_template: "gem2rpm/scl-rubygem-GEM.spec.template"
+    rubygem_spec_template: "gem2rpm/scl-rubygem-GEM.spec.erb"
     diff_package_skip: false
     diff_package_tags:
       - tfm-ror52-rhel7
