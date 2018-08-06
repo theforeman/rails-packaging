@@ -47,6 +47,8 @@ packages:
       version: 2.3.1
     tfm-ror52-rubygem-rack:
       version: 2.0.5
+    tfm-ror52-rubygem-rack-test:
+      version: 1.1.0
     tfm-ror52-rubygem-thor:
       version: 0.20.0
     tfm-ror52-rubygem-thread_safe:
