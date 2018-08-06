@@ -49,6 +49,8 @@ packages:
       version: 2.3.0
     tfm-ror52-rubygem-nio4r:
       version: 2.3.1
+    tfm-ror52-rubygem-nokogiri:
+      version: 1.8.4
     tfm-ror52-rubygem-rack:
       version: 2.0.5
     tfm-ror52-rubygem-rack-test:
