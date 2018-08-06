@@ -78,6 +78,7 @@ gem build %{gem_name}.gemspec
 
 # %%gem_install compiles any C extensions and installs the gem into ./%%gem_dir
 # by default, so that we can move it into the buildroot in %%install
+mkdir -p ./opt/rh/%{scl_ruby}/root/usr/bin
 %{?scl:scl enable %{scl} - << \EOF}
 %gem_install
 %{?scl:EOF}
@@ -99,7 +100,7 @@ rm -rf %{buildroot}%{gem_instdir}/<%= ext.split(File::SEPARATOR).first %>/
 <% end -%>
 <% unless spec.executables.nil? or spec.executables.empty? -%>
 mkdir -p %{buildroot}%{_bindir}
-cp -pa .%{_bindir}/* \
+cp -pa ./opt/rh/%{scl_ruby}/root/usr/bin/* \
         %{buildroot}%{_bindir}/
 find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 <% end -%>
