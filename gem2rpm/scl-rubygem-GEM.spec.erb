@@ -99,8 +99,7 @@ rm -rf %{buildroot}%{gem_instdir}/<%= ext.split(File::SEPARATOR).first %>/
 
 <% end -%>
 <% unless spec.executables.nil? or spec.executables.empty? -%>
-mkdir -p %{buildroot}%{_bindir}
-cp -pa ./opt/rh/%{scl_ruby}/root/usr/bin/* \
+cp -pa .%{_bindir}/* \
         %{buildroot}%{_bindir}/
 find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 <% end -%>

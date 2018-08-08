@@ -22,10 +22,11 @@
 Summary: Package that installs %scl
 Name:    %scl_name
 Version: 1.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPLv2+
 Source0: README
 Source1: LICENSE
+Source2: macros.tfm-ror52
 
 BuildRequires: help2man
 BuildRequires: scl-utils-build
@@ -86,11 +87,11 @@ help2man -N --section 7 ./h2m_help -o %{scl_name}.7
 %scl_install
 
 cat >> %{buildroot}%{_scl_scripts}/enable << EOF
-export PATH=%{_bindir}\${PATH:+:\${PATH}}
-export LD_LIBRARY_PATH=%{_libdir}\${LD_LIBRARY_PATH:+:\${LD_LIBRARY_PATH}}
-export MANPATH=%{_mandir}:\${MANPATH}
-export PKG_CONFIG_PATH=%{_libdir}/pkgconfig\${PKG_CONFIG_PATH:+:\${PKG_CONFIG_PATH}}
-export GEM_PATH=\${GEM_PATH:=%{gem_dir}:\`scl enable %{scl_ruby} -- ruby -e "print Gem.path.join(':')"\`}
+export PATH="%{_bindir}:%{_sbindir}\${PATH:+:\${PATH}}"
+export LD_LIBRARY_PATH="%{_libdir}\${LD_LIBRARY_PATH:+:\${LD_LIBRARY_PATH}}"
+export MANPATH="%{_mandir}:\${MANPATH:-}"
+export PKG_CONFIG_PATH="%{_libdir}/pkgconfig\${PKG_CONFIG_PATH:+:\${PKG_CONFIG_PATH}}"
+export GEM_PATH="\${GEM_PATH:=%{gem_dir}:\`scl enable %{scl_ruby} -- ruby -e "print Gem.path.join(':')"\`}"
 
 . scl_source enable %{scl_ruby}
 EOF
@@ -121,12 +122,14 @@ ruby -rfileutils > rubygems_filesystem.list << \EOR
   FileUtils.mkdir_p File.join '%{buildroot}', Gem.default_ext_dir_for('%{gem_dir}')
 
   # Output the relevant directories.
-  puts Gem.default_dirs['%{scl}_system'.to_sym].values
+  Gem.default_dirs['%{scl}_system'.to_sym].values
 EOR
 EOF
 
 # Create directory for license files (rhbz#1431083).
 %{?_licensedir:mkdir -p %{buildroot}%{_licensedir}}
+
+install -m 644 %{SOURCE2} %{buildroot}%{_root_sysconfdir}/rpm/macros.tfm-ror52
 
 %files
 
@@ -142,11 +145,15 @@ EOF
 
 %files build
 %{_root_sysconfdir}/rpm/macros.%{scl}-config
+%{_root_sysconfdir}/rpm/macros.tfm-ror52
 
 %files scldevel
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
+* Wed Aug 08 2018 Eric D. Helms <ericdhelms@gmail.com> 1.0-2
+- Add gem_intall macro workaround
+
 * Tue Jul 10 2018 Eric D. Helms <ericdhelms@gmail.com> 1.0-1
 - rebuilt
 
