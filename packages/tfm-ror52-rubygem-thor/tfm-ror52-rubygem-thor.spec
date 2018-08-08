@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 0.20.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Thor is a toolkit for building powerful command-line interfaces
 Group:   Development/Languages
 License: MIT
@@ -56,9 +56,7 @@ gem build %{gem_name}.gemspec
 
 # %%gem_install compiles any C extensions and installs the gem into ./%%gem_dir
 # by default, so that we can move it into the buildroot in %%install
-mkdir -p ./opt/rh/%{scl_ruby}/root/usr/bin
 %{?scl:scl enable %{scl} - << \EOF}
-# Work around incorrect bindir set during gem install
 %gem_install
 %{?scl:EOF}
 
@@ -69,7 +67,7 @@ cp -pa .%{gem_dir}/* \
 
 mkdir -p %{buildroot}%{_bindir}
 # Work around incorrect bindir set during gem install
-cp -pa ./opt/rh/%{scl_ruby}/root/usr/bin/* \
+cp -pa .%{_bindir}/* \
         %{buildroot}%{_bindir}/
 find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 
@@ -84,12 +82,14 @@ find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 %{gem_spec}
 
 %files doc
-%doc %{gem_docdir}
 %doc %{gem_instdir}/.document
 %doc %{gem_instdir}/CHANGELOG.md
 %doc %{gem_instdir}/CONTRIBUTING.md
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Wed Aug 08 2018 Eric D. Helms <ericdhelms@gmail.com> - 0.20.0-2
+- Update for new gem_install
+
 * Thu Jul 26 2018 Eric D. Helms <ericdhelms@gmail.com> - 0.20.0-1
 - Initial package
