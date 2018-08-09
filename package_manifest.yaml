@@ -37,6 +37,8 @@ packages:
       version: 1.7.1
     tfm-ror52-rubygem-i18n:
       version: 1.0.1
+    tfm-ror52-rubygem-loofah:
+      version: 2.2.2
     tfm-ror52-rubygem-mail:
       version: 2.7.0
     tfm-ror52-rubygem-marcel:
