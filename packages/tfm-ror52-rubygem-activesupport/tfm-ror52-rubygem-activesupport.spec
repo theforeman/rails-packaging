@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 5.2.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: A toolkit of support libraries and Ruby core extensions extracted from the Rails framework
 Group:   Development/Languages
 License: MIT
@@ -80,9 +80,13 @@ cp -pa .%{gem_dir}/* \
 %{gem_spec}
 
 %files doc
+%doc %{gem_docdir}
 %doc %{gem_instdir}/CHANGELOG.md
 %doc %{gem_instdir}/README.rdoc
 
 %changelog
+* Thu Aug 09 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.2.0-2
+- Add missing gem_docdir
+
 * Wed Aug 08 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.2.0-1
 - Initial package

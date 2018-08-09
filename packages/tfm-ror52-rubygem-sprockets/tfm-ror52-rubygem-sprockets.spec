@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 3.7.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Rack-based asset packaging system
 Group:   Development/Languages
 License: MIT
@@ -83,9 +83,13 @@ find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 %{gem_spec}
 
 %files doc
+%doc %{gem_docdir}
 %doc %{gem_instdir}/CHANGELOG.md
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Thu Aug 09 2018 Eric D. Helms <ericdhelms@gmail.com> - 3.7.2-2
+- Add missing gem_docdir
+
 * Wed Aug 08 2018 Eric D. Helms <ericdhelms@gmail.com> - 3.7.2-1
 - Initial package
