@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 5.2.0
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: A toolkit of support libraries and Ruby core extensions extracted from the Rails framework
 Group:   Development/Languages
 License: MIT
@@ -17,8 +17,8 @@ Requires: %{?scl_prefix_ruby}ruby(release)
 Requires: %{?scl_prefix_ruby}ruby(rubygems)
 Requires: %{?scl_prefix}rubygem(i18n)
 Requires: %{?scl_prefix}rubygem(tzinfo)
-Requires: %{?scl_prefix}rubygem(minitest)
 Requires: %{?scl_prefix}rubygem(concurrent-ruby)
+Requires: %{?scl_prefix_ruby}rubygem(minitest)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby >= 2.2.2
@@ -85,6 +85,9 @@ cp -pa .%{gem_dir}/* \
 %doc %{gem_instdir}/README.rdoc
 
 %changelog
+* Thu Aug 09 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.2.0-3
+- Fix minitest requires
+
 * Thu Aug 09 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.2.0-2
 - Add missing gem_docdir
 
