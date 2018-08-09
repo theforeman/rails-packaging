@@ -37,6 +37,8 @@ packages:
       version: 1.0.4
     tfm-ror52-rubygem-erubi:
       version: 1.7.1
+    tfm-ror52-rubygem-globalid:
+      version: 0.4.1
     tfm-ror52-rubygem-i18n:
       version: 1.0.1
     tfm-ror52-rubygem-loofah:
