@@ -29,6 +29,8 @@ packages:
       version: 5.2.0
     tfm-ror52-rubygem-activejob:
       version: 5.2.0
+    tfm-ror52-rubygem-activemodel:
+      version: 5.2.0
     tfm-ror52-rubygem-activesupport:
       version: 5.2.0
     tfm-ror52-rubygem-arel:
