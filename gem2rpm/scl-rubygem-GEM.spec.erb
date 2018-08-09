@@ -125,6 +125,7 @@ find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 
 <% if doc_subpackage -%>
 %files doc
+%doc %{gem_docdir}
 <%= doc_file_entries(spec) %>
 <% end # if doc_subpackage -%>
 
