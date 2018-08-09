@@ -23,6 +23,8 @@ packages:
       - tfm-ror52-rhel7
   hosts:
     tfm-ror52: {}
+    tfm-ror52-rubygem-actioncable:
+      version: 5.2.0
     tfm-ror52-rubygem-activesupport:
       version: 5.2.0
     tfm-ror52-rubygem-arel:
