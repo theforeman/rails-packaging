@@ -8,7 +8,6 @@ gem install \\\
         --build-root %{-d*}%{!?-d:.} \\\
         --force \\\
         --document=ri,rdoc \\\
-				--bindir %{_bindir} \\\
-				--install-dir %{gem_dir} \\\
+        --bindir %{_bindir} \\\
         %{-n*}%{!?-n:%{gem_name}-%{version}%{?prerelease}.gem} \
 %{nil}

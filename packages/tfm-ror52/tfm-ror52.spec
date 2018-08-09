@@ -22,7 +22,7 @@
 Summary: Package that installs %scl
 Name:    %scl_name
 Version: 1.0
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPLv2+
 Source0: README
 Source1: LICENSE
@@ -92,6 +92,7 @@ export LD_LIBRARY_PATH="%{_libdir}\${LD_LIBRARY_PATH:+:\${LD_LIBRARY_PATH}}"
 export MANPATH="%{_mandir}:\${MANPATH:-}"
 export PKG_CONFIG_PATH="%{_libdir}/pkgconfig\${PKG_CONFIG_PATH:+:\${PKG_CONFIG_PATH}}"
 export GEM_PATH="\${GEM_PATH:=%{gem_dir}:\`scl enable %{scl_ruby} -- ruby -e "print Gem.path.join(':')"\`}"
+export GEM_HOME="%{gem_dir}"
 
 . scl_source enable %{scl_ruby}
 EOF
@@ -151,6 +152,9 @@ install -m 644 %{SOURCE2} %{buildroot}%{_root_sysconfdir}/rpm/macros.tfm-ror52
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
+* Thu Aug 09 2018 Eric D. Helms <ericdhelms@gmail.com> 1.0-3
+- Drop install-dir and add GEM_HOME
+
 * Wed Aug 08 2018 Eric D. Helms <ericdhelms@gmail.com> 1.0-2
 - Add gem_intall macro workaround
 
