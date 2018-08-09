@@ -107,6 +107,8 @@ packages:
       version: 2.0.3
     tfm-ror52-rubygem-sprockets:
       version: 3.7.2
+    tfm-ror52-rubygem-sprockets-rails:
+      version: 3.2.1
     tfm-ror52-rubygem-tilt:
       version: 2.0.8
     tfm-ror52-rubygem-thor:

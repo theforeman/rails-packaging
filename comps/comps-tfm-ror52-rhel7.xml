@@ -54,6 +54,7 @@
       <packagereq type="default">tfm-ror52-rubygem-rails-html-sanitizer</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-railties</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-sprockets</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-sprockets-rails</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-thor</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-thread_safe</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-tilt</packagereq>
