@@ -43,6 +43,8 @@ packages:
       version: 5.2.0
     tfm-ror52-rubygem-actionpack:
       version: 5.2.0
+    tfm-ror52-rubygem-actionview:
+      version: 5.2.0
     tfm-ror52-rubygem-activesupport:
       version: 5.2.0
     tfm-ror52-rubygem-arel:
