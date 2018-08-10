@@ -22,7 +22,7 @@
 Summary: Package that installs %scl
 Name:    %scl_name
 Version: 1.0
-Release: 3%{?dist}
+Release: 4%{?dist}
 License: GPLv2+
 Source0: README
 Source1: LICENSE
@@ -146,12 +146,15 @@ install -m 644 %{SOURCE2} %{buildroot}%{_root_sysconfdir}/rpm/macros.tfm-ror52
 
 %files build
 %{_root_sysconfdir}/rpm/macros.%{scl}-config
-%{_root_sysconfdir}/rpm/macros.tfm-ror52
 
 %files scldevel
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
+%{_root_sysconfdir}/rpm/macros.tfm-ror52
 
 %changelog
+* Fri Aug 10 2018 Eric D. Helms <ericdhelms@gmail.com> - 1.0-4
+- Move gem_install macro to scldevel
+
 * Thu Aug 09 2018 Eric D. Helms <ericdhelms@gmail.com> 1.0-3
 - Drop install-dir and add GEM_HOME
 
