@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 5.2.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Email composition, delivery, and receiving framework (part of Rails)
 Group:   Development/Languages
 License: MIT
@@ -62,7 +62,6 @@ gem build %{gem_name}.gemspec
 
 # %%gem_install compiles any C extensions and installs the gem into ./%%gem_dir
 # by default, so that we can move it into the buildroot in %%install
-mkdir -p ./opt/rh/%{scl_ruby}/root/usr/bin
 %{?scl:scl enable %{scl} - << \EOF}
 %gem_install
 %{?scl:EOF}
@@ -86,5 +85,8 @@ cp -pa .%{gem_dir}/* \
 %doc %{gem_instdir}/README.rdoc
 
 %changelog
+* Fri Aug 10 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.2.0-2
+- rebuilt
+
 * Thu Aug 09 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.2.0-1
 - Initial package

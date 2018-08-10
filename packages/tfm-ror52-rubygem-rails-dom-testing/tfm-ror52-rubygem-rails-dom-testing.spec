@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 2.0.3
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: Dom and Selector assertions for Rails applications
 Group:   Development/Languages
 License: MIT
@@ -58,7 +58,6 @@ gem build %{gem_name}.gemspec
 
 # %%gem_install compiles any C extensions and installs the gem into ./%%gem_dir
 # by default, so that we can move it into the buildroot in %%install
-mkdir -p ./opt/rh/%{scl_ruby}/root/usr/bin
 %{?scl:scl enable %{scl} - << \EOF}
 %gem_install
 %{?scl:EOF}
@@ -82,6 +81,9 @@ cp -pa .%{gem_dir}/* \
 %{gem_instdir}/test
 
 %changelog
+* Fri Aug 10 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.0.3-3
+- rebuilt
+
 * Fri Aug 10 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.0.3-2
 - Fix activesupport version
 

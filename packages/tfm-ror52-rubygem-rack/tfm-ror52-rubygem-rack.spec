@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 2.0.5
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: a modular Ruby webserver interface
 Group:   Development/Languages
 License: MIT
@@ -60,7 +60,6 @@ gem build %{gem_name}.gemspec
 
 # %%gem_install compiles any C extensions and installs the gem into ./%%gem_dir
 # by default, so that we can move it into the buildroot in %%install
-mkdir -p ./opt/rh/%{scl_ruby}/root/usr/bin
 %{?scl:scl enable %{scl} - << \EOF}
 %gem_install
 %{?scl:EOF}
@@ -71,7 +70,7 @@ cp -pa .%{gem_dir}/* \
         %{buildroot}%{gem_dir}/
 
 mkdir -p %{buildroot}%{_bindir}
-cp -pa ./opt/rh/%{scl_ruby}/root/usr/bin/* \
+cp -pa .%{_bindir}/* \
         %{buildroot}%{_bindir}/
 find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 
@@ -96,5 +95,8 @@ find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 %{gem_instdir}/test
 
 %changelog
+* Fri Aug 10 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.0.5-2
+- rebuilt
+
 * Mon Aug 06 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.0.5-1
 - Initial package
