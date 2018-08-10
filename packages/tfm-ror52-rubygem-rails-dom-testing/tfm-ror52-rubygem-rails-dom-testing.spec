@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 2.0.3
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Dom and Selector assertions for Rails applications
 Group:   Development/Languages
 License: MIT
@@ -16,7 +16,7 @@ Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 Requires: %{?scl_prefix_ruby}ruby(release)
 Requires: %{?scl_prefix_ruby}ruby(rubygems)
 Requires: %{?scl_prefix}rubygem(nokogiri)
-Requires: %{?scl_prefix}rubygem(activesupport) = %{version}
+Requires: %{?scl_prefix}rubygem(activesupport)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby
@@ -82,5 +82,8 @@ cp -pa .%{gem_dir}/* \
 %{gem_instdir}/test
 
 %changelog
+* Fri Aug 10 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.0.3-2
+- Fix activesupport version
+
 * Thu Aug 09 2018 Eric D. Helms <ericdhelms@gmail.com> - 2.0.3-1
 - Initial package
