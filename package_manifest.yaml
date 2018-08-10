@@ -21,6 +21,12 @@ packages:
     diff_package_skip: false
     diff_package_tags:
       - tfm-ror52-rhel7
+    repoclosure_config: repoclosure/el7.conf
+    repoclosure_lookaside_repos:
+      - el7-base
+      - el7-updates
+      - el7-scl
+      - el7-tfm-ror52
   hosts:
     tfm-ror52: {}
     tfm-ror52-rubygem-actioncable:
@@ -77,6 +83,8 @@ packages:
       version: 1.1.0
     tfm-ror52-rubygem-rails-dom-testing:
       version: 2.0.3
+    tfm-ror52-rubygem-rails-html-sanitizer:
+      version: 1.0.4
     tfm-ror52-rubygem-sprockets:
       version: 3.7.2
     tfm-ror52-rubygem-thor:
