@@ -37,6 +37,7 @@
       <packagereq type="default">tfm-ror52-rubygem-marcel</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-method_source</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-mimemagic</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-mime-types-data</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-mini_mime</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-mini_portile2</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-multi_json</packagereq>
