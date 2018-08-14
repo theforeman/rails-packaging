@@ -105,6 +105,8 @@ packages:
       version: 5.2.0
     tfm-ror52-rubygem-railties:
       version: 5.2.0
+    tfm-ror52-rubygem-sass:
+      version: 3.4.25
     tfm-ror52-rubygem-sinatra:
       version: 2.0.3
     tfm-ror52-rubygem-sprockets:
