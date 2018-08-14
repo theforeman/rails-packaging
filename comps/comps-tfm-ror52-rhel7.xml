@@ -55,6 +55,7 @@
       <packagereq type="default">tfm-ror52-rubygem-sprockets</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-thor</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-thread_safe</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-tilt</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-turbolinks</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-tzinfo</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-websocket-driver</packagereq>

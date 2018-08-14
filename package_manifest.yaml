@@ -103,6 +103,8 @@ packages:
       version: 5.2.0
     tfm-ror52-rubygem-sprockets:
       version: 3.7.2
+    tfm-ror52-rubygem-tilt:
+      version: 2.0.8
     tfm-ror52-rubygem-thor:
       version: 0.20.0
     tfm-ror52-rubygem-thread_safe:
