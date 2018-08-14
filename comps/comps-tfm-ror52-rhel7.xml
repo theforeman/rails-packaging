@@ -30,6 +30,7 @@
       <packagereq type="default">tfm-ror52-rubygem-concurrent-ruby</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-crass</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-erubi</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-execjs</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-globalid</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-i18n</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-loofah</packagereq>
