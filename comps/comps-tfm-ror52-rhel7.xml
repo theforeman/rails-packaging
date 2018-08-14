@@ -33,6 +33,7 @@
       <packagereq type="default">tfm-ror52-rubygem-execjs</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-globalid</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-i18n</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-jquery-turbolinks</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-loofah</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-mail</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-marcel</packagereq>
