@@ -42,6 +42,7 @@
       <packagereq type="default">tfm-ror52-rubygem-mini_mime</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-mini_portile2</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-multi_json</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-musterman</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-nio4r</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-nokogiri</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-rack</packagereq>

@@ -81,6 +81,8 @@ packages:
       version: 2.3.0
     tfm-ror52-rubygem-multi_json:
       version: 1.13.1
+    tfm-ror52-rubygem-musterman:
+      version: 1.0.2
     tfm-ror52-rubygem-nio4r:
       version: 2.3.1
     tfm-ror52-rubygem-nokogiri:
