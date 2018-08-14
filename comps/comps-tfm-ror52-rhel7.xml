@@ -46,6 +46,7 @@
       <packagereq type="default">tfm-ror52-rubygem-nokogiri</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-rack</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-rack-test</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-rack-protection</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-rails</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-rails-dom-testing</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-rails-html-sanitizer</packagereq>

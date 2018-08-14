@@ -87,6 +87,8 @@ packages:
       version: 1.8.4
     tfm-ror52-rubygem-rack:
       version: 2.0.5
+    tfm-ror52-rubygem-rack-protection:
+      version: 2.0.3
     tfm-ror52-rubygem-rack-test:
       version: 1.1.0
     tfm-ror52-rubygem-rails-dom-testing:
