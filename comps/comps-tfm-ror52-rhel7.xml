@@ -65,6 +65,7 @@
       <packagereq type="default">tfm-ror52-rubygem-tzinfo</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-websocket-driver</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-websocket-extensions</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-uglifier</packagereq>
     </packagelist>
   </group>
 </comps>
