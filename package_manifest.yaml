@@ -51,6 +51,8 @@ packages:
       version: 9.0.0
     tfm-ror52-rubygem-builder:
       version: 3.2.3
+    tfm-ror52-rubygem-coffee-script-source:
+      version: 1.12.2
     tfm-ror52-rubygem-concurrent-ruby:
       version: 1.0.5
     tfm-ror52-rubygem-crass:

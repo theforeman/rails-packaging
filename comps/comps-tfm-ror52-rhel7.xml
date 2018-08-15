@@ -27,6 +27,7 @@
       <packagereq type="default">tfm-ror52-rubygem-activesupport</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-arel</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-builder</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-coffee-script-source</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-concurrent-ruby</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-crass</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-erubi</packagereq>
