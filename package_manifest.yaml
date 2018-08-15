@@ -55,6 +55,8 @@ packages:
       version: 2.4.1
     tfm-ror52-rubygem-coffee-script-source:
       version: 1.12.2
+    tfm-ror52-rubygem-coffee-rails:
+      version: 4.2.2
     tfm-ror52-rubygem-concurrent-ruby:
       version: 1.0.5
     tfm-ror52-rubygem-crass:
