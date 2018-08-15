@@ -113,6 +113,8 @@ packages:
       version: 3.7.2
     tfm-ror52-rubygem-sprockets-rails:
       version: 3.2.1
+    tfm-ror52-rubygem-sqlite3:
+      version: 1.3.13
     tfm-ror52-rubygem-tilt:
       version: 2.0.8
     tfm-ror52-rubygem-thor:

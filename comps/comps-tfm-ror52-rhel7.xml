@@ -57,6 +57,7 @@
       <packagereq type="default">tfm-ror52-rubygem-sass</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-sprockets</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-sprockets-rails</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-sqlite3</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-thor</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-thread_safe</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-tilt</packagereq>
