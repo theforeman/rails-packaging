@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 0.4.1
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: Refer to any model with a URI: gid://app/class/id
 Group:   Development/Languages
 License: MIT
@@ -15,7 +15,7 @@ Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
 Requires: %{?scl_prefix_ruby}ruby(release)
 Requires: %{?scl_prefix_ruby}ruby(rubygems)
-Requires: %{?scl_prefix}rubygem(activesupport) = %{version}
+Requires: %{?scl_prefix}rubygem(activesupport)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby >= 1.9.3
@@ -78,6 +78,9 @@ cp -pa .%{gem_dir}/* \
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Wed Aug 15 2018 Eric D. Helms <ericdhelms@gmail.com> - 0.4.1-3
+- Drop activesupport version lock
+
 * Fri Aug 10 2018 Eric D. Helms <ericdhelms@gmail.com> - 0.4.1-2
 - rebuilt
 
