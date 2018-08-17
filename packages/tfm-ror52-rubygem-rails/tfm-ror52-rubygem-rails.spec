@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 5.2.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Full-stack web application framework
 Group:   Development/Languages
 License: MIT
@@ -25,7 +25,7 @@ Requires: %{?scl_prefix}rubygem(activejob) = %{version}
 Requires: %{?scl_prefix}rubygem(actioncable)
 Requires: %{?scl_prefix}rubygem(activestorage) = %{version}
 Requires: %{?scl_prefix}rubygem(railties)
-Requires: %{?scl_prefix}rubygem(bundler)
+Requires: %{?scl_prefix_ruby}rubygem(bundler)
 Requires: %{?scl_prefix}rubygem(sprockets-rails)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel >= 1.8.11
@@ -90,5 +90,8 @@ cp -pa .%{gem_dir}/* \
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Fri Aug 17 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.2.0-2
+- Fix bundler requires
+
 * Thu Aug 09 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.2.0-1
 - Initial package
