@@ -6,7 +6,7 @@
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
 Version: 5.2.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Tools for creating, working with, and running Rails applications
 Group:   Development/Languages
 License: MIT
@@ -17,7 +17,7 @@ Requires: %{?scl_prefix_ruby}ruby(release)
 Requires: %{?scl_prefix_ruby}ruby(rubygems)
 Requires: %{?scl_prefix}rubygem(activesupport) = %{version}
 Requires: %{?scl_prefix}rubygem(actionpack)
-Requires: %{?scl_prefix}rubygem(rake)
+Requires: %{?scl_prefix_ruby}rubygem(rake)
 Requires: %{?scl_prefix}rubygem(thor)
 Requires: %{?scl_prefix}rubygem(method_source)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
@@ -90,5 +90,8 @@ find %{buildroot}%{gem_instdir}/exe -type f | xargs chmod a+x
 %doc %{gem_instdir}/README.rdoc
 
 %changelog
+* Fri Aug 17 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.2.0-2
+- Fix rake requires
+
 * Thu Aug 09 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.2.0-1
 - Initial package
