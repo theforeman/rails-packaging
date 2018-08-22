@@ -5,8 +5,8 @@
 %global gem_name activestorage
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
-Version: 5.2.0
-Release: 2%{?dist}
+Version: 5.2.1
+Release: 1%{?dist}
 Summary: Local and cloud file storage framework
 Group:   Development/Languages
 License: MIT
@@ -84,6 +84,9 @@ cp -pa .%{gem_dir}/* \
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Wed Aug 22 2018 Eric D. Helms <ericdhelms@gmail.com> 5.2.1-1
+- Release tfm-ror52-rubygem-activestorage 5.2.1
+
 * Fri Aug 10 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.2.0-2
 - rebuilt
 
