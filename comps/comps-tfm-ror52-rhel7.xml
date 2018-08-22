@@ -59,6 +59,7 @@
       <packagereq type="default">tfm-ror52-rubygem-railties</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-sass</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-sass-rails</packagereq>
+      <packagereq type="default">tfm-ror52-rubygem-sinatra</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-sprockets</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-sprockets-rails</packagereq>
       <packagereq type="default">tfm-ror52-rubygem-sqlite3</packagereq>
