@@ -5,8 +5,8 @@
 %global gem_name actionpack
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
-Version: 5.2.0
-Release: 2%{?dist}
+Version: 5.2.1
+Release: 1%{?dist}
 Summary: Web-flow and rendering framework putting the VC in MVC (part of Rails)
 Group:   Development/Languages
 License: MIT
@@ -24,7 +24,7 @@ Requires: %{?scl_prefix}rubygem(actionview)
 BuildRequires: %{?scl_prefix_ruby}ruby(release)
 BuildRequires: %{?scl_prefix_ruby}rubygems-devel
 BuildRequires: %{?scl_prefix_ruby}ruby >= 2.2.2
-BuildRequires: %{?scl_prefix}rubygem(activemodel) = 5.2.0
+BuildRequires: %{?scl_prefix}rubygem(activemodel)
 BuildArch: noarch
 Provides: %{?scl_prefix}rubygem(%{gem_name}) = %{version}
 
@@ -86,6 +86,9 @@ cp -pa .%{gem_dir}/* \
 %doc %{gem_instdir}/README.rdoc
 
 %changelog
+* Wed Aug 22 2018 Eric D. Helms <ericdhelms@gmail.com> 5.2.1-1
+- Release tfm-ror52-rubygem-actionpack 5.2.1
+
 * Fri Aug 10 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.2.0-2
 - rebuilt
 
