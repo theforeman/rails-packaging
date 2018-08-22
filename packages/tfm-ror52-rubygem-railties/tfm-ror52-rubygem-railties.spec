@@ -5,8 +5,8 @@
 %global gem_name railties
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
-Version: 5.2.0
-Release: 2%{?dist}
+Version: 5.2.1
+Release: 1%{?dist}
 Summary: Tools for creating, working with, and running Rails applications
 Group:   Development/Languages
 License: MIT
@@ -90,6 +90,9 @@ find %{buildroot}%{gem_instdir}/exe -type f | xargs chmod a+x
 %doc %{gem_instdir}/README.rdoc
 
 %changelog
+* Wed Aug 22 2018 Eric D. Helms <ericdhelms@gmail.com> 5.2.1-1
+- Release tfm-ror52-rubygem-railties 5.2.1
+
 * Fri Aug 17 2018 Eric D. Helms <ericdhelms@gmail.com> - 5.2.0-2
 - Fix rake requires
 
