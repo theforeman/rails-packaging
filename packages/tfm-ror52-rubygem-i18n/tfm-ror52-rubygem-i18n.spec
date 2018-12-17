@@ -5,7 +5,7 @@
 %global gem_name i18n
 
 Name:    %{?scl_prefix}rubygem-%{gem_name}
-Version: 1.0.1
+Version: 1.4.0
 Release: 1%{?dist}
 Summary: New wave Internationalization support for Ruby
 Group:   Development/Languages
@@ -69,7 +69,6 @@ cp -pa .%{gem_dir}/* \
 %files
 %dir %{gem_instdir}
 %license %{gem_instdir}/MIT-LICENSE
-%{gem_instdir}/gemfiles
 %{gem_libdir}
 %exclude %{gem_cache}
 %{gem_spec}
@@ -77,8 +76,10 @@ cp -pa .%{gem_dir}/* \
 %files doc
 %doc %{gem_docdir}
 %doc %{gem_instdir}/README.md
-%{gem_instdir}/test
 
 %changelog
+* Thu Jan 03 2019 Michael Moll <mmoll@mmoll.at> - 1.4.0-1
+- Update to 1.4.0
+
 * Mon Aug 06 2018 Eric D. Helms <ericdhelms@gmail.com> - 1.0.1-1
 - Initial package
